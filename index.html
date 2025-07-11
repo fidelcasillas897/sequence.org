@@ -129,7 +129,70 @@
 
 <footer>
     <p>© 2025 Genómica Salud | Interpretación de Genoma Profesional</p>
+
+<section id="servicios" class="pt-5 pb-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4" data-es="🔬 Nuestros Servicios de Secuenciación" data-en="🔬 Our Sequencing Services"></h2>
+    <p class="mb-5" data-es="Ofrecemos análisis genómicos especializados en bacterias, plantas y humanos, con tecnología de vanguardia y bioinformática avanzada." data-en="We offer specialized genomic analyses in bacteria, plants, and humans using cutting-edge sequencing and advanced bioinformatics."></p>
+
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <h4 class="card-title">🦠 <span data-es="Genoma Bacteriano" data-en="Bacterial Genome"></span></h4>
+            <ul class="text-start">
+              <li>Secuenciación de genoma completo (WGS)" data-en="Whole genome sequencing (WGS)</li>
+              <li>Tipificación (MLST, SNPs)" data-en="Typing (MLST, SNPs)</li>
+              <li>Detección de genes de resistencia y virulencia" data-en="Detection of resistance and virulence genes</li>
+              <li>Identificación de plásmidos y fagos" data-en="Identification of plasmids and phages</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <h4 class="card-title">🌿 <span data-es="Genoma de Plantas" data-en="Plant Genome"></span></h4>
+            <ul class="text-start">
+              <li>Montaje de novo del genoma" data-en="De novo genome assembly</li>
+              <li>RNA-Seq y análisis de expresión génica" data-en="RNA-Seq and gene expression analysis</li>
+              <li>Identificación de variantes genéticas" data-en="Identification of genetic variants</li>
+              <li>Mapeo de QTLs y rutas metabólicas" data-en="QTL mapping and metabolic pathway analysis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <h4 class="card-title">🧬 <span data-es="Genoma Humano" data-en="Human Genome"></span></h4>
+            <ul class="text-start">
+              <li>Secuenciación del exoma completo (WES)" data-en="Whole Exome Sequencing (WES)</li>
+              <li>Secuenciación del genoma completo (WGS)" data-en="Whole Genome Sequencing (WGS)</li>
+              <li>Análisis de variantes patogénicas (ACMG / ClinVar)" data-en="Pathogenic variant analysis (ACMG / ClinVar)</li>
+              <li>Farmacogenómica y medicina personalizada" data-en="Pharmacogenomics and personalized medicine</li>
+              <li>CNVs, INDELs y mutaciones raras" data-en="CNVs, INDELs and rare mutations</li>
+              <li>Reportes clínicos personalizados" data-en="Custom clinical reports</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </footer>
 
+
+<script>
+function setLanguage(lang) {
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+}
+setLanguage('es');
+</script>
 </body>
 </html>
