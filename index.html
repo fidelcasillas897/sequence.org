@@ -1,123 +1,135 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interpretación Genómica | Medicina Personalizada</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
-    header video { width: 100%; height: auto; object-fit: cover; }
-    .lang-switch { position: fixed; top: 15px; right: 15px; z-index: 999; }
-    .lang-switch img { width: 30px; margin-left: 10px; cursor: pointer; }
-    .section-title { font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; }
-    .gallery video, .gallery img { width: 100%; border-radius: 10px; margin-bottom: 1rem; }
-    footer { margin-top: 5rem; background-color: #e9ecef; padding: 1rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpretación Genómica - Genómica Salud</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+        }
+        nav a {
+            color: white !important;
+            margin-right: 20px;
+        }
+        header {
+            background-image: url('imagen en seccion colaboracion y tipo de proyectos.png');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 4px #000;
+        }
+        header h1 {
+            font-size: 3.5rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        section {
+            padding: 60px 30px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Selector de idioma -->
-<div class="lang-switch">
-  <img src="https://flagcdn.com/es.svg" onclick="setLanguage('es')" alt="Español">
-  <img src="https://flagcdn.com/us.svg" onclick="setLanguage('en')" alt="English">
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Genómica Salud</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-<!-- Portada con video -->
 <header>
-  <video autoplay muted loop id="portada">
-    <source src="PORTADA.mp4" type="video/mp4">
-    Tu navegador no soporta video.
-  </video>
+    <h1>Interpretación Genómica de Alta Precisión</h1>
 </header>
 
-<!-- Bienvenida -->
-<section class="container text-center mt-5">
-  <h1 data-es="Interpretación Genómica de Precisión" data-en="Precision Genomic Interpretation"></h1>
-  <p data-es="Avanzamos la medicina personalizada a través del análisis profundo del genoma humano." 
-     data-en="Advancing personalized medicine through deep genomic analysis."></p>
-</section>
-
-<!-- Sobre el CEO -->
-<section class="container mt-5">
-  <div class="row align-items-center">
-    <div class="col-md-4"><img src="personalized_medicine.png" class="img-fluid rounded" alt="CEO"></div>
-    <div class="col-md-8">
-      <h2 data-es="Fidel A. Casillas, Ph.D." data-en="Fidel A. Casillas, Ph.D."></h2>
-      <p data-es="Especialista en genética humana y farmacogenómica. Experto en interpretación clínica de datos genómicos." 
-         data-en="Specialist in human genetics and pharmacogenomics. Expert in clinical genomic data interpretation."></p>
+<section id="servicios" class="bg-white">
+    <div class="container">
+        <h2 class="text-center mb-4">Nuestros Servicios</h2>
+        <p>Ofrecemos análisis bioinformáticos avanzados a partir de datos de secuenciación de genoma completo, exoma o regiones específicas. Nuestro servicio incluye:</p>
+        <ul>
+            <li>Interpretación de variantes genéticas con respaldo clínico</li>
+            <li>Reportes personalizados en medicina de precisión</li>
+            <li>Secuenciación de metagenomas microbianos</li>
+            <li>Análisis de polimorfismos y mutaciones</li>
+            <li>Farmacogenómica y diagnóstico molecular</li>
+        </ul>
+        <img src="imagen en seccion servicios.png" class="img-fluid mt-4" alt="Servicios de secuenciación">
     </div>
-  </div>
 </section>
 
-<!-- Servicios -->
-<section class="container mt-5">
-  <h2 class="section-title" data-es="Nuestros Servicios" data-en="Our Services"></h2>
-  <img src="imagen en seccion servicios.png" alt="Servicios" class="img-fluid mb-4">
-  <ul>
-    <li>Secuenciación de exoma y genoma completo (WES/WGS)</li>
-    <li>Análisis de variantes genéticas y farmacogenómica</li>
-    <li>Estudios metagenómicos y microbioma (shotgun y 16S)</li>
-    <li>RNA-seq, ATAC-seq y ChIP-seq</li>
-  </ul>
-</section>
-
-<!-- Galería -->
-<section class="container gallery mt-5">
-  <h2 class="section-title text-center" data-es="Explora Nuestro Trabajo" data-en="Explore Our Work"></h2>
-  <div class="row">
-    <div class="col-md-4"><video autoplay muted loop><source src="Modern Genetic Research.mp4" type="video/mp4"></video></div>
-    <div class="col-md-4"><img src="Risk_analysis.png" alt="Análisis de Riesgo"></div>
-    <div class="col-md-4"><video autoplay muted loop><source src="LAB.mp4" type="video/mp4"></video></div>
-    <div class="col-md-4"><video autoplay muted loop><source src="Genome Sequencing service.mp4" type="video/mp4"></video></div>
-    <div class="col-md-4"><video autoplay muted loop><source src="MULTIPLE SEQUENCERS.mp4" type="video/mp4"></video></div>
-    <div class="col-md-4"><img src="Genome Sequencing Innovation.gif" alt="Innovación Secuenciación"></div>
-    <div class="col-md-4"><img src="BACTER.gif" alt="Bacterias"></div>
-  </div>
-</section>
-
-<!-- Proyectos -->
-<section class="container mt-5">
-  <h2 class="section-title" data-es="Colaboración y Tipos de Proyecto" data-en="Collaboration & Projects"></h2>
-  <img src="imagen en seccion colaboracion y tipo de proyectos.png" class="img-fluid mb-4" alt="Proyectos">
-  <p data-es="Trabajamos con universidades, hospitales, startups y centros de investigación de todo el mundo." 
-     data-en="We collaborate with universities, hospitals, startups, and global research centers."></p>
-</section>
-
-<!-- Contacto -->
-<section class="container mt-5">
-  <h2 class="section-title" data-es="Contáctanos" data-en="Contact Us"></h2>
-  <form>
-    <div class="mb-3">
-      <label for="name" data-es="Nombre" data-en="Name"></label>
-      <input type="text" class="form-control" id="name" required>
+<section id="galeria" class="bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Galería Multimedia</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <video controls class="w-100"><source src="LAB.mp4" type="video/mp4"></video>
+            </div>
+            <div class="col-md-4 mb-3">
+                <video controls class="w-100"><source src="Modern Genetic Research.mp4" type="video/mp4"></video>
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="Risk_analysis.png" class="img-fluid" alt="Análisis de riesgo genético">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="BACTER.gif" class="img-fluid" alt="Bacterias">
+            </div>
+            <div class="col-md-4 mb-3">
+                <video controls class="w-100"><source src="Genome Sequencing service.mp4" type="video/mp4"></video>
+            </div>
+            <div class="col-md-4 mb-3">
+                <video controls class="w-100"><source src="MULTIPLE SEQUENCERS.mp4" type="video/mp4"></video>
+            </div>
+        </div>
     </div>
-    <div class="mb-3">
-      <label for="email" data-es="Correo electrónico" data-en="Email"></label>
-      <input type="email" class="form-control" id="email" required>
-    </div>
-    <div class="mb-3">
-      <label for="message" data-es="Mensaje" data-en="Message"></label>
-      <textarea class="form-control" id="message" rows="4" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary" data-es="Enviar" data-en="Send"></button>
-  </form>
 </section>
 
-<!-- Footer -->
-<footer class="text-center">
-  <p>&copy; 2025 Fidel A. Casillas – Todos los derechos reservados.</p>
+<section id="contacto">
+    <div class="container">
+        <h2 class="text-center mb-4">Contacto</h2>
+        <form>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo electrónico:</label>
+                <input type="email" class="form-control" id="correo" required>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje:</label>
+                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Genómica Salud | Interpretación de Genoma Profesional</p>
 </footer>
-
-<script>
-function setLanguage(lang) {
-  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-    el.textContent = el.getAttribute('data-' + lang);
-  });
-}
-setLanguage('es');
-</script>
 
 </body>
 </html>
