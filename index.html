@@ -11,10 +11,31 @@
         body {
             font-family: 'Segoe UI', sans-serif;
             background-color: #f8f9fa;
+            .language-switch {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.language-switch img {
+  width: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.language-switch img:hover {
+  transform: scale(1.1);
+}
+
         }
         nav a {
             color: white !important;
             margin-right: 20px;
+           
+            <div class="language-switch">
+  <a href="index.html"><img src="https://flagcdn.com/w40/mx.png" alt="Español" title="Español"></a>
+  <a href="index_en.html"><img src="https://flagcdn.com/w40/us.png" alt="English" title="English"></a>
+</div>
+
         }
         header {
             background-image: url('imagen en seccion colaboracion y tipo de proyectos.png');
