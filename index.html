@@ -2,18 +2,20 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interpretación Genómica - Genómica Salud</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Genómica Salud - Interpretación y Secuenciación</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
+      background-color: #f9f9f9;
+      color: #333;
     }
 
     nav {
-      background-color: #343a40;
+      background-color: #222;
     }
 
     nav a {
@@ -30,39 +32,63 @@
       align-items: center;
       justify-content: center;
       color: white;
-      text-shadow: 2px 2px 4px #000;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
     }
 
     header h1 {
       font-size: 3rem;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 1rem 2rem;
-      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.65);
+      padding: 1.5rem 2.5rem;
+      border-radius: 15px;
     }
 
     section {
       padding: 60px 20px;
     }
 
-    .servicios h2 {
+    .servicios h2, .galeria h2 {
       text-align: center;
       margin-bottom: 40px;
     }
 
     .card {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       border: none;
       margin-bottom: 20px;
     }
 
+    .overlay-text {
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+      color: white;
+      background: rgba(0,0,0,0.6);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .media-block {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .media-block img,
+    .media-block video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
     footer {
-      background-color: #343a40;
+      background-color: #222;
       color: white;
       text-align: center;
       padding: 20px 0;
     }
   </style>
 </head>
+
 <body>
   <!-- Navegación -->
   <nav class="navbar navbar-expand-lg navbar-dark px-4">
@@ -78,63 +104,75 @@
 
   <!-- Portada -->
   <header>
-    <h1>Interpretación Genómica de Alta Precisión</h1>
+    <h1>Exploramos tu genoma. Interpretamos tu salud.</h1>
   </header>
 
   <!-- Servicios -->
-  <section id="servicios" class="servicios container">
-    <h2>🔬 Nuestros Servicios de Secuenciación</h2>
-    <p class="text-center mb-5">Ofrecemos análisis genómicos especializados en bacterias, plantas y humanos, con tecnología de vanguardia y bioinformática avanzada.</p>
+  <section id="servicios" class="container servicios">
+    <h2>🧬 Servicios de Secuenciación Genómica</h2>
+    <p class="text-center mb-5">Analizamos desde bacterias hasta humanos. Datos que revelan tu biología con precisión clínica.</p>
 
     <div class="row">
-      <!-- Genoma Bacteriano -->
       <div class="col-md-4">
         <div class="card p-4">
           <h4>🧫 Genoma Bacteriano</h4>
           <ul>
-            <li>Secuenciación de genoma completo (WGS)</li>
-            <li>Tipificación (MLST, SNPs)</li>
-            <li>Detección de genes de resistencia y virulencia</li>
-            <li>Identificación de plásmidos y fagos</li>
+            <li>WGS, SNPs y tipificación MLST</li>
+            <li>Genes de resistencia y virulencia</li>
+            <li>Identificación de plásmidos</li>
           </ul>
         </div>
       </div>
 
-      <!-- Genoma de Plantas -->
       <div class="col-md-4">
         <div class="card p-4">
-          <h4>🌿 Genoma de Plantas</h4>
+          <h4>🌱 Genoma de Plantas</h4>
           <ul>
-            <li>Montaje de novo del genoma</li>
-            <li>RNA-Seq y análisis de expresión génica</li>
-            <li>Identificación de variantes genéticas</li>
-            <li>Mapeo de QTLs y rutas metabólicas</li>
+            <li>Montaje de novo</li>
+            <li>RNA-Seq y expresión génica</li>
+            <li>QTLs y rutas metabólicas</li>
           </ul>
         </div>
       </div>
 
-      <!-- Genoma Humano -->
       <div class="col-md-4">
         <div class="card p-4">
-          <h4>🧬 Genoma Humano</h4>
+          <h4>👤 Genoma Humano</h4>
           <ul>
-            <li>Secuenciación del exoma completo (WES)</li>
-            <li>Secuenciación del genoma completo (WGS)</li>
-            <li>Análisis de variantes patogénicas (ACMG / ClinVar)</li>
-            <li>Farmacogenómica y medicina personalizada</li>
-            <li>CNVs, INDELs y mutaciones raras</li>
-            <li>Reportes clínicos personalizados</li>
+            <li>WES y WGS clínico</li>
+            <li>Farmacogenómica</li>
+            <li>Mutaciones raras y CNVs</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Galería -->
+  <section id="galeria" class="container galeria">
+    <h2>📽️ Galería Interactiva</h2>
+
+    <div class="media-block">
+      <img src="Secuenciación del Genoma Humano_.png" alt="Genoma Humano">
+      <div class="overlay-text">“Tu código, tu historia genética”</div>
+    </div>
+
+    <div class="media-block">
+      <video src="Modern Genetic Research.mp4" autoplay loop muted></video>
+      <div class="overlay-text">“Investigación moderna, impacto real”</div>
+    </div>
+
+    <div class="media-block">
+      <video src="Genome Sequencing Innovation.mp4" autoplay loop muted></video>
+      <div class="overlay-text">“Innovación que redefine la genómica”</div>
+    </div>
+  </section>
+
   <!-- Contacto -->
   <section id="contacto" class="container text-center">
     <h2>📩 Contacto</h2>
-    <p>¿Deseas más información o una cotización?</p>
-    <p>Escríbenos a: <strong>fidel.casillas@quantumanalytics.mx</strong></p>
+    <p>¿Deseas interpretar tus datos genómicos o cotizar un proyecto?</p>
+    <p>Contáctanos en: <strong>fidel.casillas@quantumanalytics.mx</strong></p>
   </section>
 
   <!-- Footer -->
