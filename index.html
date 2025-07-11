@@ -3,136 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interpretación Genómica Profesional | Fidel A. Casillas, Ph.D.</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <title>Interpretación Genómica | Medicina Personalizada</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { font-family: 'Segoe UI', sans-serif; }
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
     header video { width: 100%; height: auto; object-fit: cover; }
-    .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 1000; }
-    .lang-switch img { width: 32px; cursor: pointer; margin-left: 10px; }
-    .section-title { font-weight: bold; margin-top: 40px; }
-    .contact-form textarea { resize: vertical; }
-    .gallery img, .gallery video { max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 15px; }
+    .lang-switch { position: fixed; top: 15px; right: 15px; z-index: 999; }
+    .lang-switch img { width: 30px; margin-left: 10px; cursor: pointer; }
+    .section-title { font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; }
+    .gallery video, .gallery img { width: 100%; border-radius: 10px; margin-bottom: 1rem; }
+    footer { margin-top: 5rem; background-color: #e9ecef; padding: 1rem; }
   </style>
 </head>
 <body>
 
-<!-- Idioma -->
+<!-- Selector de idioma -->
 <div class="lang-switch">
   <img src="https://flagcdn.com/es.svg" onclick="setLanguage('es')" alt="Español">
   <img src="https://flagcdn.com/us.svg" onclick="setLanguage('en')" alt="English">
 </div>
 
-<!-- PORTADA -->
+<!-- Portada con video -->
 <header>
-  <video autoplay muted loop id="PORTADA">
+  <video autoplay muted loop id="portada">
     <source src="PORTADA.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
+    Tu navegador no soporta video.
   </video>
 </header>
 
 <!-- Bienvenida -->
 <section class="container text-center mt-5">
-  <h1 data-es="Interpretación Profesional de Datos Genómicos" data-en="Professional Genomic Data Interpretation"></h1>
-  <p data-es="Servicio especializado en análisis e interpretación de genómica clínica, bacteriana, metagenómica y más." 
-     data-en="Specialized service in the analysis and interpretation of clinical, bacterial, metagenomic and more."></p>
+  <h1 data-es="Interpretación Genómica de Precisión" data-en="Precision Genomic Interpretation"></h1>
+  <p data-es="Avanzamos la medicina personalizada a través del análisis profundo del genoma humano." 
+     data-en="Advancing personalized medicine through deep genomic analysis."></p>
 </section>
 
 <!-- Sobre el CEO -->
-<section class="container">
+<section class="container mt-5">
   <div class="row align-items-center">
-    <div class="col-md-4">
-      <img src="personalized_medicine.png" class="img-fluid rounded">
-    </div>
+    <div class="col-md-4"><img src="personalized_medicine.png" class="img-fluid rounded" alt="CEO"></div>
     <div class="col-md-8">
-      <h2 data-es="Fidel Antonio Casillas Muñoz, Ph.D." data-en="Fidel Antonio Casillas Muñoz, Ph.D."></h2>
-      <p data-es="Especialista en genética humana y farmacobiotecnología. Experto en análisis bioinformático aplicado a medicina personalizada." 
-         data-en="Specialist in human genetics and pharmacobiotechnology. Expert in bioinformatic analysis applied to personalized medicine."></p>
+      <h2 data-es="Fidel A. Casillas, Ph.D." data-en="Fidel A. Casillas, Ph.D."></h2>
+      <p data-es="Especialista en genética humana y farmacogenómica. Experto en interpretación clínica de datos genómicos." 
+         data-en="Specialist in human genetics and pharmacogenomics. Expert in clinical genomic data interpretation."></p>
     </div>
   </div>
 </section>
 
 <!-- Servicios -->
-<section class="container">
-  <h2 class="section-title" data-es="Servicios de Interpretación" data-en="Interpretation Services"></h2>
+<section class="container mt-5">
+  <h2 class="section-title" data-es="Nuestros Servicios" data-en="Our Services"></h2>
   <img src="imagen en seccion servicios.png" alt="Servicios" class="img-fluid mb-4">
   <ul>
-    <li data-es="Genoma completo (WGS) y exoma (WES)" data-en="Whole Genome (WGS) and Exome Sequencing (WES)"></li>
-    <li data-es="Genoma bacteriano y resistoma" data-en="Bacterial Genome and Resistome"></li>
-    <li data-es="Metagenómica (16S, shotgun)" data-en="Metagenomics (16S, shotgun)"></li>
-    <li data-es="HiSeq, NovaSeq, NextSeq (Illumina)" data-en="HiSeq, NovaSeq, NextSeq (Illumina)"></li>
-    <li data-es="Cromatina, ChIP-seq, ATAC-seq, RNA-seq" data-en="Chromatin, ChIP-seq, ATAC-seq, RNA-seq"></li>
-    <li data-es="Identificación de variantes, anotación y filtrado" data-en="Variant calling, annotation and filtering"></li>
-    <li data-es="Paneles clínicos y farmacogenómica" data-en="Clinical panels and pharmacogenomics"></li>
+    <li>Secuenciación de exoma y genoma completo (WES/WGS)</li>
+    <li>Análisis de variantes genéticas y farmacogenómica</li>
+    <li>Estudios metagenómicos y microbioma (shotgun y 16S)</li>
+    <li>RNA-seq, ATAC-seq y ChIP-seq</li>
   </ul>
 </section>
 
-<!-- Galería Multimedia -->
-<section class="container gallery">
-  <h2 class="section-title" data-es="Explora Nuestro Trabajo" data-en="Explore Our Work"></h2>
+<!-- Galería -->
+<section class="container gallery mt-5">
+  <h2 class="section-title text-center" data-es="Explora Nuestro Trabajo" data-en="Explore Our Work"></h2>
   <div class="row">
-    <div class="col-md-4"><img src="Risk_analysis.png" alt="Análisis de Riesgo"></div>
     <div class="col-md-4"><video autoplay muted loop><source src="Modern Genetic Research.mp4" type="video/mp4"></video></div>
+    <div class="col-md-4"><img src="Risk_analysis.png" alt="Análisis de Riesgo"></div>
     <div class="col-md-4"><video autoplay muted loop><source src="LAB.mp4" type="video/mp4"></video></div>
-    <div class="col-md-4"><img src="BACTER.gif" alt="Genoma Bacteriano"></div>
-    <div class="col-md-4"><video autoplay muted loop><source src="Genome Sequencing Innovation.mp4" type="video/mp4"></video></div>
-    <div class="col-md-4"><video autoplay muted loop><source src="MULTIPLE SEQUENCERS.mp4" type="video/mp4"></video></div>
     <div class="col-md-4"><video autoplay muted loop><source src="Genome Sequencing service.mp4" type="video/mp4"></video></div>
+    <div class="col-md-4"><video autoplay muted loop><source src="MULTIPLE SEQUENCERS.mp4" type="video/mp4"></video></div>
+    <div class="col-md-4"><img src="Genome Sequencing Innovation.gif" alt="Innovación Secuenciación"></div>
+    <div class="col-md-4"><img src="BACTER.gif" alt="Bacterias"></div>
   </div>
 </section>
 
 <!-- Proyectos -->
-<section class="container">
-  <h2 class="section-title" data-es="Tipos de Proyectos" data-en="Project Types"></h2>
-  <img src="imagen en seccion colaboracion y tipo de proyectos.png" alt="Colaboraciones" class="img-fluid mb-4">
-  <p data-es="Trabajamos con hospitales, universidades, laboratorios clínicos, startups biotecnológicas y centros de investigación internacionales."
-     data-en="We work with hospitals, universities, clinical labs, biotech startups and international research centers."></p>
+<section class="container mt-5">
+  <h2 class="section-title" data-es="Colaboración y Tipos de Proyecto" data-en="Collaboration & Projects"></h2>
+  <img src="imagen en seccion colaboracion y tipo de proyectos.png" class="img-fluid mb-4" alt="Proyectos">
+  <p data-es="Trabajamos con universidades, hospitales, startups y centros de investigación de todo el mundo." 
+     data-en="We collaborate with universities, hospitals, startups, and global research centers."></p>
 </section>
 
-<!-- Cotizaciones -->
-<section class="container contact-form">
-  <h2 class="section-title" data-es="Solicita una Cotización" data-en="Request a Quote"></h2>
+<!-- Contacto -->
+<section class="container mt-5">
+  <h2 class="section-title" data-es="Contáctanos" data-en="Contact Us"></h2>
   <form>
     <div class="mb-3">
       <label for="name" data-es="Nombre" data-en="Name"></label>
-      <input type="text" class="form-control" id="name">
+      <input type="text" class="form-control" id="name" required>
     </div>
     <div class="mb-3">
-      <label for="email" data-es="Correo Electrónico" data-en="Email"></label>
-      <input type="email" class="form-control" id="email">
+      <label for="email" data-es="Correo electrónico" data-en="Email"></label>
+      <input type="email" class="form-control" id="email" required>
     </div>
     <div class="mb-3">
-      <label for="details" data-es="Detalles del Proyecto" data-en="Project Details"></label>
-      <textarea class="form-control" id="details" rows="5"></textarea>
+      <label for="message" data-es="Mensaje" data-en="Message"></label>
+      <textarea class="form-control" id="message" rows="4" required></textarea>
     </div>
-    <button class="btn btn-primary" type="submit" data-es="Enviar" data-en="Submit"></button>
+    <button type="submit" class="btn btn-primary" data-es="Enviar" data-en="Send"></button>
   </form>
 </section>
 
-<!-- Blog -->
-<section class="container">
-  <h2 class="section-title" data-es="Blog y Publicaciones" data-en="Blog and Publications"></h2>
-  <ul>
-    <li><a href="#">Uso clínico de WES en diagnóstico raro</a></li>
-    <li><a href="#">Comparación entre pipelines de metagenómica</a></li>
-    <li><a href="#">Interpretación de VUS y medicina de precisión</a></li>
-  </ul>
-</section>
-
 <!-- Footer -->
-<footer class="text-center mt-5 p-3 bg-light">
-  <p>&copy; 2025 Fidel A. Casillas. All rights reserved.</p>
+<footer class="text-center">
+  <p>&copy; 2025 Fidel A. Casillas – Todos los derechos reservados.</p>
 </footer>
 
 <script>
-  function setLanguage(lang) {
-    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-      el.textContent = el.getAttribute('data-' + lang);
-    });
-  }
-  // Set default language to Spanish
-  setLanguage('es');
+function setLanguage(lang) {
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+}
+setLanguage('es');
 </script>
 
 </body>
