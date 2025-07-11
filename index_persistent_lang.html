@@ -48,17 +48,26 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Genómica Salud</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-            </ul>
-        </div>
-    </div>
+<nav\ class="navbar\ navbar\-expand\-lg\ navbar\-dark\ bg\-dark\ sticky\-top">\
+\ \ \ \ <div\ class="container\-fluid">\
+\ \ \ \ \ \ \ \ <a\ class="navbar\-brand"\ href="\#">Genómica\ Salud</a>\
+\ \ \ \ \ \ \ \ <div\ class="collapse\ navbar\-collapse">\
+\ \ \ \ \ \ \ \ \ \ \ \ <ul\ class="navbar\-nav\ ms\-auto">\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li\ class="nav\-item"><a\ class="nav\-link"\ href="\#servicios">Servicios</a></li>\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li\ class="nav\-item"><a\ class="nav\-link"\ href="\#galeria">Galería</a></li>\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li\ class="nav\-item"><a\ class="nav\-link"\ href="\#contacto">Contacto</a></li>\
+\ \ \ \ \ \ \ \ \ \ \ \ </ul>\
+\ \ \ \ \ \ \ \ </div>\
+\ \ \ \ </div>\
+\
+<div\ class="flex\ space\-x\-2\ ml\-auto">\
+\ \ <button\ onclick="setLanguage\('es'\)"\ title="Español">\
+\ \ \ \ 🇲🇽\
+\ \ </button>\
+\ \ <button\ onclick="setLanguage\('en'\)"\ title="English">\
+\ \ \ \ 🇺🇸\
+\ \ </button>\
+</div>\
 </nav>
 
 <header>
@@ -194,5 +203,36 @@ function setLanguage(lang) {
 }
 setLanguage('es');
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const langBtns = document.querySelectorAll(".lang-btn");
+    const elements = document.querySelectorAll("[data-en]");
+
+    function switchLang(lang) {
+      elements.forEach(el => {
+        if (lang === "en") {
+          el.textContent = el.getAttribute("data-en");
+        } else {
+          el.textContent = el.getAttribute("data-es");
+        }
+      });
+      localStorage.setItem("preferredLang", lang);
+    }
+
+    langBtns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const selectedLang = btn.getAttribute("data-lang");
+        switchLang(selectedLang);
+      });
+    });
+
+    const storedLang = localStorage.getItem("preferredLang");
+    if (storedLang) {
+      switchLang(storedLang);
+    }
+  });
+</script>
+
 </body>
 </html>
