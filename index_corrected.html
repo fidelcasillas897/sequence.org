@@ -203,36 +203,5 @@ function setLanguage(lang) {
 }
 setLanguage('es');
 </script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const langBtns = document.querySelectorAll(".lang-btn");
-    const elements = document.querySelectorAll("[data-en]");
-
-    function switchLang(lang) {
-      elements.forEach(el => {
-        if (lang === "en") {
-          el.textContent = el.getAttribute("data-en");
-        } else {
-          el.textContent = el.getAttribute("data-es");
-        }
-      });
-      localStorage.setItem("preferredLang", lang);
-    }
-
-    langBtns.forEach(btn => {
-      btn.addEventListener("click", function () {
-        const selectedLang = btn.getAttribute("data-lang");
-        switchLang(selectedLang);
-      });
-    });
-
-    const storedLang = localStorage.getItem("preferredLang");
-    if (storedLang) {
-      switchLang(storedLang);
-    }
-  });
-</script>
-
 </body>
 </html>
