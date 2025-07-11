@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fidelcasillas897.github.io/sequence.org/sitemap.xml

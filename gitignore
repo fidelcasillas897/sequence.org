@@ -1,0 +1,11 @@
+
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar carpetas ocultas o de sistema
+__pycache__/
+*.log
+.env
+
+# No ignorar archivos multimedia porque el usuario desea incluirlos

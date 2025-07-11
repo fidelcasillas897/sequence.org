@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interpretación Genómica Profesional | Fidel A. Casillas, Ph.D.</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; }
+    header video { width: 100%; height: auto; object-fit: cover; }
+    .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+    .lang-switch img { width: 32px; cursor: pointer; margin-left: 10px; }
+    .section-title { font-weight: bold; margin-top: 40px; }
+    .contact-form textarea { resize: vertical; }
+    .gallery img, .gallery video { max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+
+<!-- Idioma -->
+<div class="lang-switch">
+  <img src="https://flagcdn.com/es.svg" onclick="setLanguage('es')" alt="Español">
+  <img src="https://flagcdn.com/us.svg" onclick="setLanguage('en')" alt="English">
+</div>
+
+<!-- PORTADA -->
+<header>
+  <video autoplay muted loop id="PORTADA">
+    <source src="PORTADA.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+</header>
+
+<!-- Bienvenida -->
+<section class="container text-center mt-5">
+  <h1 data-es="Interpretación Profesional de Datos Genómicos" data-en="Professional Genomic Data Interpretation"></h1>
+  <p data-es="Servicio especializado en análisis e interpretación de genómica clínica, bacteriana, metagenómica y más." 
+     data-en="Specialized service in the analysis and interpretation of clinical, bacterial, metagenomic and more."></p>
+</section>
+
+<!-- Sobre el CEO -->
+<section class="container">
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <img src="personalized_medicine.png" class="img-fluid rounded">
+    </div>
+    <div class="col-md-8">
+      <h2 data-es="Fidel Antonio Casillas Muñoz, Ph.D." data-en="Fidel Antonio Casillas Muñoz, Ph.D."></h2>
+      <p data-es="Especialista en genética humana y farmacobiotecnología. Experto en análisis bioinformático aplicado a medicina personalizada." 
+         data-en="Specialist in human genetics and pharmacobiotechnology. Expert in bioinformatic analysis applied to personalized medicine."></p>
+    </div>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section class="container">
+  <h2 class="section-title" data-es="Servicios de Interpretación" data-en="Interpretation Services"></h2>
+  <img src="imagen en seccion servicios.png" alt="Servicios" class="img-fluid mb-4">
+  <ul>
+    <li data-es="Genoma completo (WGS) y exoma (WES)" data-en="Whole Genome (WGS) and Exome Sequencing (WES)"></li>
+    <li data-es="Genoma bacteriano y resistoma" data-en="Bacterial Genome and Resistome"></li>
+    <li data-es="Metagenómica (16S, shotgun)" data-en="Metagenomics (16S, shotgun)"></li>
+    <li data-es="HiSeq, NovaSeq, NextSeq (Illumina)" data-en="HiSeq, NovaSeq, NextSeq (Illumina)"></li>
+    <li data-es="Cromatina, ChIP-seq, ATAC-seq, RNA-seq" data-en="Chromatin, ChIP-seq, ATAC-seq, RNA-seq"></li>
+    <li data-es="Identificación de variantes, anotación y filtrado" data-en="Variant calling, annotation and filtering"></li>
+    <li data-es="Paneles clínicos y farmacogenómica" data-en="Clinical panels and pharmacogenomics"></li>
+  </ul>
+</section>
+
+<!-- Galería Multimedia -->
+<section class="container gallery">
+  <h2 class="section-title" data-es="Explora Nuestro Trabajo" data-en="Explore Our Work"></h2>
+  <div class="row">
+    <div class="col-md-4"><img src="Risk_analysis.png" alt="Análisis de Riesgo"></div>
+    <div class="col-md-4"><video autoplay muted loop><source src="Modern Genetic Research.mp4" type="video/mp4"></video></div>
+    <div class="col-md-4"><video autoplay muted loop><source src="LAB.mp4" type="video/mp4"></video></div>
+    <div class="col-md-4"><img src="BACTER.gif" alt="Genoma Bacteriano"></div>
+    <div class="col-md-4"><video autoplay muted loop><source src="Genome Sequencing Innovation.mp4" type="video/mp4"></video></div>
+    <div class="col-md-4"><video autoplay muted loop><source src="MULTIPLE SEQUENCERS.mp4" type="video/mp4"></video></div>
+    <div class="col-md-4"><video autoplay muted loop><source src="Genome Sequencing service.mp4" type="video/mp4"></video></div>
+  </div>
+</section>
+
+<!-- Proyectos -->
+<section class="container">
+  <h2 class="section-title" data-es="Tipos de Proyectos" data-en="Project Types"></h2>
+  <img src="imagen en seccion colaboracion y tipo de proyectos.png" alt="Colaboraciones" class="img-fluid mb-4">
+  <p data-es="Trabajamos con hospitales, universidades, laboratorios clínicos, startups biotecnológicas y centros de investigación internacionales."
+     data-en="We work with hospitals, universities, clinical labs, biotech startups and international research centers."></p>
+</section>
+
+<!-- Cotizaciones -->
+<section class="container contact-form">
+  <h2 class="section-title" data-es="Solicita una Cotización" data-en="Request a Quote"></h2>
+  <form>
+    <div class="mb-3">
+      <label for="name" data-es="Nombre" data-en="Name"></label>
+      <input type="text" class="form-control" id="name">
+    </div>
+    <div class="mb-3">
+      <label for="email" data-es="Correo Electrónico" data-en="Email"></label>
+      <input type="email" class="form-control" id="email">
+    </div>
+    <div class="mb-3">
+      <label for="details" data-es="Detalles del Proyecto" data-en="Project Details"></label>
+      <textarea class="form-control" id="details" rows="5"></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit" data-es="Enviar" data-en="Submit"></button>
+  </form>
+</section>
+
+<!-- Blog -->
+<section class="container">
+  <h2 class="section-title" data-es="Blog y Publicaciones" data-en="Blog and Publications"></h2>
+  <ul>
+    <li><a href="#">Uso clínico de WES en diagnóstico raro</a></li>
+    <li><a href="#">Comparación entre pipelines de metagenómica</a></li>
+    <li><a href="#">Interpretación de VUS y medicina de precisión</a></li>
+  </ul>
+</section>
+
+<!-- Footer -->
+<footer class="text-center mt-5 p-3 bg-light">
+  <p>&copy; 2025 Fidel A. Casillas. All rights reserved.</p>
+</footer>
+
+<script>
+  function setLanguage(lang) {
+    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+      el.textContent = el.getAttribute('data-' + lang);
+    });
+  }
+  // Set default language to Spanish
+  setLanguage('es');
+</script>
+
+</body>
+</html>
